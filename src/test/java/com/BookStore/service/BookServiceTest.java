@@ -11,8 +11,9 @@ public class BookServiceTest {
         BookService bookService;
 
         @Test
-        public void addBooks() {
+        public void addBook() {
             Book book = new Book();
+            book.setId(1);
             book.setTitle("Pride & Prejudice");
             book.setAuthor("Jane Auten");
             book.setGenre("Romance/Drama");

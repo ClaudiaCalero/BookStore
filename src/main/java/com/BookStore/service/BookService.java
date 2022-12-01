@@ -35,7 +35,7 @@ public class BookService {
     }
 
     public Book updateBook(Book book) {
-        Book existingBook = (Book) bookRepository.findByBookId(book.getId()).orElse(null);
+        Book existingBook = (Book) bookRepository.findById(book.getId()).orElse(null);
         existingBook.setTitle(book.getTitle());
         existingBook.setAuthor(book.getAuthor());
         existingBook.setGenre(book.getGenre());
@@ -47,5 +47,6 @@ public class BookService {
         bookRepository.deleteById(id);
         return "book removed from inventory " + id;
     }
+
 
 }
